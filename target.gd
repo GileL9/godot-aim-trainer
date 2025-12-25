@@ -4,11 +4,11 @@ extends Node2D
 @onready var timer = $Area2D/death_timer
 @onready var spawn_timer = $Area2D/spawn_timer
 @onready var label = $"../../background/Label"
-
+var current_level = 1
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	timer.start()
-	sprite.scale = Vector2(2,2)
+	#sprite.scale = Vector2(2,2)
 	var randomX = randi_range(64,1216)
 	var randomY = randi_range(64, 656)
 	self.position = Vector2(randomX,randomY)

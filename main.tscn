@@ -13,15 +13,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_ig7tw")
 
-[node name="Label" type="Label" parent="background"]
-layout_mode = 0
-offset_left = 489.0
-offset_top = 13.0
-offset_right = 793.0
-offset_bottom = 126.0
-theme_override_font_sizes/font_size = 64
-script = ExtResource("2_lquwl")
-
 [node name="target_parent" type="Node2D" parent="."]
 
 [node name="spawner" type="Node2D" parent="target_parent"]
@@ -29,10 +20,18 @@ script = ExtResource("2_1bvp3")
 target_scene = ExtResource("3_h2yge")
 
 [node name="spawn_timer" type="Timer" parent="target_parent/spawner"]
-wait_time = 0.5
 autostart = true
 
 [node name="target" parent="target_parent" instance=ExtResource("3_h2yge")]
+visible = false
+
+[node name="Label" type="Label" parent="."]
+offset_left = 630.0
+offset_top = 22.0
+offset_right = 934.0
+offset_bottom = 135.0
+theme_override_font_sizes/font_size = 64
+script = ExtResource("2_lquwl")
 
 [node name="player" parent="." instance=ExtResource("2_0xm2m")]
 
